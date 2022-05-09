@@ -36,12 +36,23 @@ fn main() {
     let mut a = a;
     // 注意这些计算符除了!之外都可以加上=进行赋值 (因为!=要用来判断不等于)
     a <<= b;
-    println!("(a << b) value is {}", a);
-    let a = Complex { re: 2.1, im: -1.2 };
-    let b = Complex::new(11.1, 22.2);
-    let result = a + b;
+    println!("new value of a is {}", a);
+    // println!("(a << b) value is {}", a);
+    // let a = Complex { re: 2.1, im: -1.2 };
+    // let b = Complex::new(11.1, 22.2);
+    // let result = a + b;
  
-    println!("{} + {}i", result.re, result.im)
+    // println!("{} + {}i", result.re, result.im)
+    // Only '' for character, "" is for string
+    let ch = '乐';
+    println!("The space ch used is {}", std::mem::size_of_val(&ch));
+    let ch = "乐";
+    println!("The space ch used is {}", std::mem::size_of_val(&ch));
+    // [1, 5)
+    let i = 1..5;
+    for j in i{
+        println!("{}", j)
+    }
 }
 
 
